@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "target": "es2019",
+    "outDir": "./lib",
+    "declaration": true,
+    "module": "commonjs"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__test__/*"
+  ]
+}

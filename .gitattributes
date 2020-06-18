@@ -1,0 +1,4 @@
+# To normalize the projects line-endings and avoid tracking whitespace changes.
+# On checkout: set line-endings based on platform (Windows: CRLF, Others: LF).
+# On commit: convert line-endings to back to LF for ALL platforms.
+* text=auto

@@ -1,0 +1,51 @@
+{
+  "license": "ISC",
+  "main": "index.js",
+  "version": "1.0.0",
+  "types": "lib/index.d.ts",
+  "author": "Daniel Atherton",
+  "name": "npm-package-template",
+  "description": "A node template package to bootstrap package development.",
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "npm",
+    "node",
+    "node-package",
+    "node-template",
+    "node-package-manager",
+    "node-package-template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanielWAtherton/npm-package-template.git"
+  },
+  "bugs": {
+    "email": "DanielWAtherton@gmail.com",
+    "url": "https://github.com/DanielWAtherton/npm-package-template/issues"
+  },
+  "homepage": "https://github.com/DanielWAtherton/npm-package-template#npm-package-template",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf ./lib/",
+    "dryrun": "npm publish --dry-run",
+    "test": "jest --config jestconfig.json",
+    "lint": "eslint --fix \"**/*.{ts,js}\"",
+    "format": "prettier --write \"**/*.{ts,js}\"",
+    "postbuild": "npm run lint && npm run format && npm test",
+    "prepublishOnly": "npm run build && git add -A . && git commit -m '[Daniel Atherton] publish version 1.0.0.'"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "eslint": "^7.3.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.5",
+    "@types/jest": "^26.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-config-prettier": "^6.11.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "@typescript-eslint/eslint-plugin": "^3.5.0"
+  }
+}
